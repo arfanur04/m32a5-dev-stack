@@ -1,2 +1,36 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* :root {
+	--brand-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
+}
+
+.text-gradient {
+	background-image: var(--brand-gradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+	background-image: var(--brand-gradient);
+} */
+
+@theme {
+	--brand-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
+	--color-bc1: #d91b7e;
+	--color-bc2: #cd4db5;
+}
+
+@utility text-gradient {
+	background-image: var(--brand-gradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+}
+
+@utility bg-gradient {
+	background-image: var(--brand-gradient);
+}
