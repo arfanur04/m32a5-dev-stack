@@ -1,12 +1,11 @@
 import logo from "../assets/logo-text.png";
-import "./Navbar.css";
 
 const Navbar = () => {
 	const navLinks = (
 		<>
 			<li className="font-bold text-gray-500">
 				<a>
-					<span className="text-gradient gradient">Home</span>
+					<span className="text-gradient">Home</span>
 				</a>
 			</li>
 			<li className="font-bold text-gray-500">
@@ -43,7 +42,7 @@ const Navbar = () => {
 	return (
 		<div className="bg-base-200 sticky top-0 z-50">
 			<div className="container mx-auto navbar">
-				<div className="navbar-start flex-1 md:flex-auto min-w-[18%] md:min-w-auto">
+				<div className="navbar-start flex-1 sm:flex-auto min-w-[19%] sm:min-w-auto">
 					<div className="dropdown">
 						<div
 							tabIndex={0}
@@ -84,7 +83,7 @@ const Navbar = () => {
 				</div>
 				<div className="navbar-end">
 					<a className="btn btn-signUp rounded-full">Sign In</a>
-					<a className="btn btn-signUp rounded-full text-white bg-bc1 hover:bg-bc2 active:bg-bc1">
+					<a className="btn btn-signUp rounded-full text-white bg-bc1-red hover:bg-bc2-pink active:bg-bc1-red">
 						Sign Up
 					</a>
 				</div>

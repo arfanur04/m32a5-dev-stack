@@ -19,18 +19,32 @@
 
 @theme {
 	--brand-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
-	--color-bc1: #d91b7e;
-	--color-bc2: #cd4db5;
+	--brand-gradient2: linear-gradient(180deg, #f97316, #ec4899, #8b5cf6);
+	--color-bc1-red: #d91b7e;
+	--color-bc2-pink: #cd4db5;
+	--color-bc3-gray: #475569;
 }
 
 @utility text-gradient {
 	background-image: var(--brand-gradient);
 	background-clip: text;
-	-webkit-background-clip: text;
 	color: transparent;
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 @utility bg-gradient {
 	background-image: var(--brand-gradient);
+
+	&:hover {
+		background-image: var(--brand-gradient2);
+	}
+}
+
+@utility bb {
+	@apply border border-red-500;
+
+	& > * {
+		@apply border border-red-500;
+	}
 }
