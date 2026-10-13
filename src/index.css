@@ -34,6 +34,10 @@
 	-webkit-text-fill-color: transparent;
 }
 
+@utility bg-gradient {
+	background-image: var(--brand-gradient);
+}
+
 @utility btn-gradient {
 	background-image: var(--brand-gradient);
 	&:active {
@@ -41,7 +45,7 @@
 	}
 }
 
-@utility btn-bb1 {
+@utility btn-card {
 	@apply btn mt-5 h-12 w-full rounded-xl border-0 bg-slate-900 text-base font-medium text-white;
 	&:hover {
 		@apply bg-slate-700;

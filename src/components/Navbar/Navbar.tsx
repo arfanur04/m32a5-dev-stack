@@ -1,4 +1,4 @@
-import logo from "../assets/logo-text.png";
+import logo from "../../assets/logo-text.png";
 
 const Navbar = () => {
 	const navLinks = (
@@ -41,7 +41,7 @@ const Navbar = () => {
 
 	return (
 		<div className="bg-base-200 sticky top-0 z-50">
-			<div className="container mx-auto navbar">
+			<div className="container mx-auto navbar md:w-11/12">
 				<div className="navbar-start flex-1 sm:flex-auto min-w-[19%] sm:min-w-auto">
 					<div className="dropdown">
 						<div
@@ -73,13 +73,15 @@ const Navbar = () => {
 							{navLinks}
 						</ul>
 					</div>
-					<a className="hidden text-xl lg:flex btn btn-ghost">{imgTagLogo}</a>
+					<a className="hidden text-xl lg:flex btn btn-ghost pl-0">
+						{imgTagLogo}
+					</a>
 				</div>
 				<div className="hidden navbar-center lg:flex">
 					<ul className="px-1 menu menu-horizontal">{navLinks}</ul>
 				</div>
 				<div className="navbar-center lg:hidden">
-					<a className="text-xl btn btn-ghost">{imgTagLogo}</a>
+					<a className="text-xl btn btn-ghost px-0">{imgTagLogo}</a>
 				</div>
 				<div className="navbar-end">
 					<a className="btn btn-signUp rounded-full">Sign In</a>

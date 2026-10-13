@@ -1,7 +1,8 @@
 import "./App.css";
-import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
-import Technologies from "./components/Technologies";
+import Banner from "./components/Banner/Banner";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Technologies from "./components/Technologies/Technologies";
 
 import { toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 export const showSuccessToast = (message: string) => {
 	toast.success(message, {
 		position: "bottom-right",
-		autoClose: 5000,
+		autoClose: 1500,
 		hideProgressBar: false,
 		closeOnClick: false,
 		pauseOnHover: true,
@@ -22,7 +23,7 @@ export const showSuccessToast = (message: string) => {
 export const showRemoveToast = (message: string) => {
 	toast.info(message, {
 		position: "bottom-right",
-		autoClose: 5000,
+		autoClose: 1500,
 		hideProgressBar: false,
 		closeOnClick: false,
 		pauseOnHover: true,
@@ -39,6 +40,7 @@ function App() {
 			<Navbar />
 			<Banner />
 			<Technologies />
+			<Footer />
 		</>
 	);
 }

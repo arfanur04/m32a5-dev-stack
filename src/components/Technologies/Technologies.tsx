@@ -1,8 +1,8 @@
 import { Suspense, useState } from "react";
-import type { ITechnology } from "../type";
-import TechContainer from "./TechContainer";
-import TechStacks from "./TechStacks";
-import { showRemoveToast, showSuccessToast } from "../App";
+import type { ITechnology } from "../../type";
+import TechContainer from "./TechContainer/TechContainer";
+import TechStacks from "./TechStack/TechStacks";
+import { showRemoveToast, showSuccessToast } from "../../App";
 
 const technologiesFetch = async (): Promise<ITechnology[]> => {
 	const res = await fetch("/technologies.json");
@@ -31,10 +31,7 @@ const Technologies = () => {
 	};
 
 	return (
-		<div
-			id="scroll-page"
-			className="container w-11/12 py-16 mx-auto"
-		>
+		<div className="container w-11/12 py-16 mx-auto">
 			<header className="mb-6">
 				<h2 className="mb-2 text-2xl font-extrabold md:text-3xl lg:text-4xl">
 					Explore the <span className="text-gradient">Technologies</span>
@@ -48,7 +45,6 @@ const Technologies = () => {
 					<TechContainer
 						technologiesPromise={technologiesPromise}
 						stacks={stacks}
-						setStacks={setStacks}
 						handleAdd={handleAdd}
 					/>
 				</Suspense>

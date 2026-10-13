@@ -1,27 +1,26 @@
-import { use, useEffect, type Dispatch, type SetStateAction } from "react";
-import type { ITechnology } from "../type";
+import { use, useEffect } from "react";
+import type { ITechnology } from "../../../type";
 import TechCard from "./TechCard";
 
 interface ITechContainerProps {
 	technologiesPromise: Promise<ITechnology[]>;
 	stacks: ITechnology[];
-	setStacks: Dispatch<SetStateAction<ITechnology[]>>;
 	handleAdd: (technology: ITechnology) => void;
 }
 
 const TechContainer = ({
 	technologiesPromise,
 	stacks,
-	setStacks,
 	handleAdd,
 }: ITechContainerProps) => {
 	const technologies = use(technologiesPromise);
 
+	//> need to remove this after testing
 	useEffect(() => {
-		const element = document.getElementById("scroll-page");
-		if (element) {
-			element.scrollIntoView({ behavior: "smooth" });
-		}
+		window.scrollTo({
+			top: document.body.scrollHeight,
+			behavior: "smooth",
+		});
 	}, [technologies]);
 
 	return (
@@ -31,7 +30,6 @@ const TechContainer = ({
 					key={technology.id}
 					technology={technology}
 					stacks={stacks}
-					setStacks={setStacks}
 					handleAdd={handleAdd}
 				/>
 			))}

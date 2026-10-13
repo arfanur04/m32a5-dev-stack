@@ -1,4 +1,4 @@
-import type { ITechnology } from "../type";
+import type { ITechnology } from "../../../type";
 
 interface ITechStackProps {
 	stack: ITechnology;

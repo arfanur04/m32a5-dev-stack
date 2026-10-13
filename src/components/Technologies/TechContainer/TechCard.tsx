@@ -1,11 +1,9 @@
-import type { Dispatch, SetStateAction } from "react";
-import type { ITechnology } from "../type";
+import type { ITechnology } from "../../../type";
 import { FaCheck } from "react-icons/fa";
 
 interface ITechCardProps {
 	technology: ITechnology;
 	stacks: ITechnology[];
-	setStacks: Dispatch<SetStateAction<ITechnology[]>>;
 	handleAdd: (technology: ITechnology) => void;
 }
 
@@ -55,7 +53,7 @@ const TechCard = ({ technology, stacks, handleAdd }: ITechCardProps) => {
 				<button
 					onClick={() => handleAdd(technology)}
 					disabled={isAdded}
-					className="btn-bb1"
+					className="btn-card"
 				>
 					{isAdded ? (
 						<>
