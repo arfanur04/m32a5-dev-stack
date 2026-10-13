@@ -13,7 +13,7 @@
 	-webkit-text-fill-color: transparent;
 }
 
-.bg-gradient {
+.btn-gradient {
 	background-image: var(--brand-gradient);
 } */
 
@@ -22,7 +22,8 @@
 	--brand-gradient2: linear-gradient(180deg, #f97316, #ec4899, #8b5cf6);
 	--color-bc1-red: #d91b7e;
 	--color-bc2-pink: #cd4db5;
-	--color-bc3-gray: #475569;
+	--color-bc3-gray: #7991b5;
+	--color-bc4-purple: #d14db2;
 }
 
 @utility text-gradient {
@@ -33,17 +34,25 @@
 	-webkit-text-fill-color: transparent;
 }
 
-@utility bg-gradient {
+@utility btn-gradient {
 	background-image: var(--brand-gradient);
-
-	&:hover {
+	&:active {
 		background-image: var(--brand-gradient2);
+	}
+}
+
+@utility btn-bb1 {
+	@apply btn mt-5 h-12 w-full rounded-xl border-0 bg-slate-900 text-base font-medium text-white;
+	&:hover {
+		@apply bg-slate-700;
+	}
+	&:disabled {
+		@apply bg-slate-200  text-bc4-purple font-bold;
 	}
 }
 
 @utility bb {
 	@apply border border-red-500;
-
 	& > * {
 		@apply border border-red-500;
 	}
