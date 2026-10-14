@@ -4,7 +4,7 @@
 
 **Dev Stack** is a website where you can see many technologies. You can choose the ones you like and add them to your own stack.
 
-:link: **Live Site:** _add your live link here_
+:link: **Live Site:** [m32a5-dev-stack-arfanur35.netlify.app](https://m32a5-dev-stack-arfanur35.netlify.app/)
 
 :package: **Repository:** [github.com/arfanur04/m32a5-dev-stack](https://github.com/arfanur04/m32a5-dev-stack)
 
