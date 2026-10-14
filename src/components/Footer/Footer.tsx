@@ -49,7 +49,7 @@ const Footer = () => {
 						</div>
 
 						{/* Link groups */}
-						<div className="col-span-5 gap-12 sm:gap-6 mt-6 lg:mt-0 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center md:text-left *:last:justify-self-center *:last:col-span-full *:md:last:col-span-1 *:last:w-full">
+						<div className="col-span-5 gap-12 sm:gap-6 mt-6 lg:mt-0 lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center md:text-left *:last:col-span-full *:last:justify-self-center *:md:last:col-span-1 *:last:w-full">
 							{linkGroups.map(({ title, links }) => (
 								<div key={title}>
 									<h4 className="text-sm font-bold tracking-wider text-slate-900 uppercase">

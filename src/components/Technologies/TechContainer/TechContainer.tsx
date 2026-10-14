@@ -1,4 +1,4 @@
-import { use, useEffect } from "react";
+import { use } from "react";
 import type { ITechnology } from "../../../type";
 import TechCard from "./TechCard";
 
@@ -14,14 +14,6 @@ const TechContainer = ({
 	handleAdd,
 }: ITechContainerProps) => {
 	const technologies = use(technologiesPromise);
-
-	//> need to remove this after testing
-	useEffect(() => {
-		window.scrollTo({
-			top: document.body.scrollHeight,
-			behavior: "smooth",
-		});
-	}, [technologies]);
 
 	return (
 		<div className="grid grid-cols-1 col-span-1 gap-6 md:col-span-2 lg:col-span-3 md:grid-cols-2 lg:grid-cols-3">
